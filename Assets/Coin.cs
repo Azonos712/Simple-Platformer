@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
     {
         if (other.GetComponent<RigidbodyFirstPersonController>())
         {
-            GameManager.Instance.AddCoin();
+            CoinManager.Instance.AddCoin();
             Destroy(gameObject);
         }
     }

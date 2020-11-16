@@ -6,11 +6,11 @@ public class CoinText : MonoBehaviour
     private void OnEnable()
     {
         _text = GetComponent<Text>();
-        GameManager.Instance.OnCollectCoin += ShowNumberOfCoins;
+        CoinManager.Instance.OnCollectCoin += ShowNumberOfCoins;
     }
     private void OnDisable()
     {
-        GameManager.Instance.OnCollectCoin -= ShowNumberOfCoins;
+        CoinManager.Instance.OnCollectCoin -= ShowNumberOfCoins;
     }
     void ShowNumberOfCoins(int count)
     {
